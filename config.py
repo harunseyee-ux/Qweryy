@@ -4,9 +4,9 @@ import telebot
 # Telegram Configuration
 TOKEN = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
 ADMIN_ID = int(os.getenv("ADMIN_ID", "123456789"))
-REQUIRED_CHANNEL = "@channelusername"  # Isi username channel atau None
+REQUIRED_CHANNEL = "@channelusername"  # Isi username channel join atau None jika tidak pakai
 
-# INI BARIS YANG PENTING UNTUK MENGATASI CRASH:
+# Inisialisasi Bot Telegram
 bot = telebot.TeleBot(TOKEN)
 
 # Header Image Menu Utama (URL atau file_id Telegram)
