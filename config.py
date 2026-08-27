@@ -1,9 +1,13 @@
 import os
+import telebot
 
 # Telegram Configuration
-TOKEN = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE") # Disarankan pakai Environment Variable Railway
-ADMIN_ID = int(os.getenv("ADMIN_ID", "123456789"))     # Masukkan ID Telegram Admin
-REQUIRED_CHANNEL = "@channelusername"                  # Channel join wajib (Opsional, isi None jika tidak ada)
+TOKEN = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
+ADMIN_ID = int(os.getenv("ADMIN_ID", "123456789"))
+REQUIRED_CHANNEL = "@channelusername"  # Isi username channel join (misal: @nama_channel) atau None jika tidak pakai
+
+# Inisialisasi Bot Telegram (PERBAIKAN ERROR IMPORT)
+bot = telebot.TeleBot(TOKEN)
 
 # Header Image Menu Utama (URL atau file_id Telegram)
 HEADER_MENU_PHOTO = "https://picsum.photos/600/300"
